@@ -54,13 +54,13 @@ const createNewChamp = (newChamp) => {
 
 const updateOneChamp = (champId, changes) => {
   try {
-    const isAlreadyAdded = DB.champions.findIndex((champ) => champ.name === changes.name) > -1;
-    if(isAlreadyAdded){
-        throw {
-            status: 400,
-            message: `Champ with the name '${changes.name}' already exists`
-        };
-    }
+    // const isAlreadyAdded = DB.champions.findIndex((champ) => champ.name === changes.name) > -1;
+    // if(isAlreadyAdded){
+    //     throw {
+    //         status: 400,
+    //         message: `Champ with the name '${changes.name}' already exists`
+    //     };
+    // }
     const indexForUpdate = DB.champions.findIndex(
       (champ) => champ.id === champId
     );

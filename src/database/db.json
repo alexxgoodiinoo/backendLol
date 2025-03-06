@@ -27,7 +27,8 @@
       "description": "Una criatura enigmática y lacónica, conocida por su caparazón blindado y su actitud imparable.",
       "imagen": "https://www.models-resource.com/resources/big_icons/12/11433.png",
       "createdAt": "2/12/2025",
-      "updateAt": "2/12/2025"
+      "updateAt": "3/6/2025, 12:07:33 PM",
+      "image": "https://www.models-resource.com/resources/big_icons/12/11433.png?updated=1443016473"
     },
     {
       "id": "6995cbc1-25cd-4edb-bf1a-f01bd43a7ba5",
@@ -62,22 +63,6 @@
       "imagen": "https://esle.io/storage/app/40257/1560928804-anivia-chibi-a4.jpg",
       "createdAt": "2/12/2025",
       "updateAt": "2/12/2025"
-    },
-    {
-      "id": "ed6a42b7-d718-43a7-a5d1-943cb799e498",
-      "name": "Sion",
-      "role": "Tanque",
-      "abilities": [
-        "si",
-        "no",
-        "si o que",
-        "tu estas mal"
-      ],
-      "region": "Noxus",
-      "description": "Hola que tal",
-      "imagen": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg",
-      "createdAt": "3/5/2025",
-      "updateAt": "3/5/2025"
     }
   ]
 }
