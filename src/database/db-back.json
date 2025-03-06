@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "usuario": "Alex",
+      "email": "alex@gmail.com",
+      "password": "alex123"
+    }
+  ],
+  "champions": [
+    {
+      "id": "1",
+      "name": "Amumu",
+      "role": "Tanque",
+      "abilities": [
+        "Toque Maldito",
+        "Lanzamiento de Vendaje",
+        "Desesperación",
+        "Berrinche",
+        "Maldición de la Momia Triste"
+      ],
+      "region": "Shurima",
+      "description": "Un pequeño y solitario no-muerto que busca amigos, pero cuya maldición hace que todos lo eviten."
+    },
+    {
+      "id": "2",
+      "name": "Anivia",
+      "role": "Mago/Control",
+      "abilities": [
+        "Resurrección",
+        "Destello Helado",
+        "Cristalizar",
+        "Tormenta Glacial"
+      ],
+      "region": "Freljord",
+      "description": "Un espíritu fénix de hielo que protege Freljord con sus poderes invernales."
+    },
+    {
+      "id": "3",
+      "name": "Rammus",
+      "role": "Tanque",
+      "abilities": [
+        "Caparazón en Movimiento",
+        "Bola de Poder",
+        "Defensa en Punto",
+        "Provocación Frenética",
+        "Impacto Tembloroso"
+      ],
+      "region": "Shurima",
+      "description": "Una criatura enigmática y lacónica, conocida por su caparazón blindado y su actitud imparable."
+    }
+  ]
+}

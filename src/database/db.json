@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "usuario": "Alex",
+      "email": "alex@gmail.com",
+      "password": "alex123"
+    },
+    {
+      "usuario": "Adrian",
+      "email": "adrian@gmail.com",
+      "password": "adrian123"
+    }
+  ],
+  "champions": [
+    {
+      "id": "ea94a6e1-d1a2-4633-bc20-0ba73b296548",
+      "name": "Rammus",
+      "role": "Tanque",
+      "abilities": [
+        "Caparazón en Movimiento",
+        "Bola de Poder",
+        "Defensa en Punto",
+        "Provocación Frenética",
+        "Impacto Tembloroso"
+      ],
+      "region": "Shurima",
+      "description": "Una criatura enigmática y lacónica, conocida por su caparazón blindado y su actitud imparable.",
+      "imagen": "https://www.models-resource.com/resources/big_icons/12/11433.png",
+      "createdAt": "2/12/2025",
+      "updateAt": "2/12/2025"
+    },
+    {
+      "id": "6995cbc1-25cd-4edb-bf1a-f01bd43a7ba5",
+      "name": "Emumu",
+      "role": "Tanque",
+      "abilities": [
+        "Toque Maldito",
+        "Lanzamiento de Vendaje",
+        "Desesperación",
+        "Berrinche",
+        "Maldición de la Momia Triste"
+      ],
+      "region": "Shurima",
+      "description": "Quiere ser mi amigo? Porfa",
+      "imagen": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/91/Skin_Loading_Screen_Emumu.jpg",
+      "createdAt": "2/12/2025",
+      "updateAt": "2/14/2025, 7:49:28 AM"
+    },
+    {
+      "id": "57817baf-074e-4710-8f51-68eca7424c0e",
+      "name": "Anivia",
+      "role": "Mago",
+      "abilities": [
+        "Resurrección",
+        "Destello Helado",
+        "Cristalizar",
+        "Congelación",
+        "Tormenta Glacial"
+      ],
+      "region": "Freljord",
+      "description": "Mi campeón favorito, sin duda alguna Anivia, la criofenix. No tendrá mucho ataque, no tendrá mucha defensa... pero me encanta. Es muy difícil de controlar, sobre todo la Q, porque tienes que petarla/controlar la distancia muy bien para aturdir. Y la W, porque si no en vez de ayudarte a escapar/encerrar al enemigo/ayudar a los aliados... puedes hacer lo contrario. No haré los stats que hacen Maestros Yis y de ese estilo... pero me conformo con un 6/0/20... y ser decisivo en las TF aunque yo no sea el que de last hit. PD: Me encanta jugar bajo torre con poca vida, que algún ilusionado se meta debajo a matarme, lo haga, pero gracias a mi pasiva me salve renaciendo y lo mate al quedar tan tocado por torre",
+      "imagen": "https://esle.io/storage/app/40257/1560928804-anivia-chibi-a4.jpg",
+      "createdAt": "2/12/2025",
+      "updateAt": "2/12/2025"
+    },
+    {
+      "id": "ed6a42b7-d718-43a7-a5d1-943cb799e498",
+      "name": "Sion",
+      "role": "Tanque",
+      "abilities": [
+        "si",
+        "no",
+        "si o que",
+        "tu estas mal"
+      ],
+      "region": "Noxus",
+      "description": "Hola que tal",
+      "imagen": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg",
+      "createdAt": "3/5/2025",
+      "updateAt": "3/5/2025"
+    }
+  ]
+}
