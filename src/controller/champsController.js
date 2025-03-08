@@ -1,9 +1,9 @@
 const champsService = require('../services/champService');
 
-const getAllChamps = (req, res) => {
+const getAllChamps = async (req, res) => {
     const { role } = req.query;
     try{
-        const allChamps = champsService.getAllChamps({ role });
+        const allChamps = await champsService.getAllChamps({ role });
         res.send({ status:'OK', data: allChamps });
     }catch(error){
         res
@@ -12,7 +12,7 @@ const getAllChamps = (req, res) => {
     }
 };
 
-const getOneChamp = (req, res) => {
+const getOneChamp = async (req, res) => {
     const{
         params: {champId},
     } = req;
@@ -25,7 +25,7 @@ const getOneChamp = (req, res) => {
             });
     }
     try{
-        const champ = champsService.getOneChamp(champId);
+        const champ = await champsService.getOneChamp(champId);
         res.send({ status:'OK', data: champ });
     }catch(error){
         res
@@ -34,7 +34,7 @@ const getOneChamp = (req, res) => {
     }
 };
 
-const createNewChamp = (req, res) => {
+const createNewChamp = async (req, res) => {
     const body = req.body;
     if(
         !body.name ||
@@ -62,7 +62,7 @@ const createNewChamp = (req, res) => {
         imagen: body.imagen,
     };
     try{
-        const createdChamp = champsService.createNewChamp(newChamp);
+        const createdChamp = await champsService.createNewChamp(newChamp);
         res.status(201).send({status: 'OK', data: createdChamp});
     }catch(error){
         res
@@ -71,7 +71,7 @@ const createNewChamp = (req, res) => {
     }
 };
 
-const updateOneChamp = (req, res) => {
+const updateOneChamp = async (req, res) => {
     const {
         body,
         params: {champId}
@@ -85,7 +85,7 @@ const updateOneChamp = (req, res) => {
             });
     }
     try{
-        const updatedChamp = champsService.updateOneChamp(champId, body);
+        const updatedChamp = await champsService.updateOneChamp(champId, body);
         res.send({status: 'OK', data: updatedChamp});
     }catch(error){
         res
@@ -94,7 +94,7 @@ const updateOneChamp = (req, res) => {
     }
 };
 
-const deleteOneChamp = (req, res) => {
+const deleteOneChamp = async (req, res) => {
     const {
         params: {champId},
     } = req;
@@ -107,7 +107,7 @@ const deleteOneChamp = (req, res) => {
             });
     }
     try{
-        champsService.deleteOneChamp(champId);
+        await champsService.deleteOneChamp(champId);
         res.status(204).send({status: 'OK'});
     }catch(error){
         res

@@ -1,25 +1,25 @@
 const {v4:uuid} = require('uuid');
 const Champ = require('../database/champs');
 
-const getAllChamps = (filterParams) => {
+const getAllChamps = async (filterParams) => {
     try{
-        const allChamps = Champ.getAllChamps(filterParams);
+        const allChamps = await Champ.getAllChamps(filterParams);
         return allChamps;
     }catch(error){
         throw error;
     }
 };
 
-const getOneChamp = (champId) => {
+const getOneChamp = async (champId) => {
     try{
-        const champ = Champ.getOneChamp(champId);
+        const champ = await Champ.getOneChamp(champId);
         return champ;
     }catch(error){
         throw error;
     }
 };
 
-const createNewChamp = (newChamp) => {
+const createNewChamp = async (newChamp) => {
     const champToInsert = {
         id: uuid(),
         ...newChamp,
@@ -27,25 +27,25 @@ const createNewChamp = (newChamp) => {
         updateAt: new Date().toLocaleDateString("en-US", {timeZone: "UTC"}),
     };
     try{
-        const createdChamp = Champ.createNewChamp(champToInsert);
+        const createdChamp = await Champ.createNewChamp(champToInsert);
         return createdChamp;
     }catch(error){
         throw error;
     };
 };
 
-const updateOneChamp = (champId, changes) => {
+const updateOneChamp = async (champId, changes) => {
     try{
-        const updatedChamp = Champ.updateOneChamp(champId, changes);
+        const updatedChamp = await Champ.updateOneChamp(champId, changes);
         return updatedChamp;
     }catch(error){
         throw error;
     }
 };
 
-const deleteOneChamp = (champId) => {
+const deleteOneChamp = async (champId) => {
     try{
-        Champ.deleteOneChamp(champId);
+        await Champ.deleteOneChamp(champId);
     }catch(error){
         throw error;
     }
