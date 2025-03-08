@@ -21,8 +21,7 @@ async function getChamps() {
     const respuesta = await cliente.query('SELECT * FROM public."Champ"');
     return respuesta.rows;
   } catch (err) {
-    console.error("Error", err);
-    return [];
+    throw err;
   }
 }
 
@@ -34,8 +33,7 @@ async function getOneChamp(id) {
     );
     return respuesta.rows;
   } catch (err) {
-    console.error("Error", err);
-    return [];
+    throw err;
   }
 }
 
@@ -57,8 +55,7 @@ async function createNewChamp(newChamp) {
     );
     return respuesta.rows;
   } catch (err) {
-    console.error("Error", err);
-    return [];
+    throw err;
   }
 }
 
@@ -80,8 +77,7 @@ async function updateOneChamp(updateChamp, id) {
     );
     return respuesta.rows;
   } catch (err) {
-    console.error("Error", err);
-    return [];
+    throw err;
   }
 }
 
@@ -93,8 +89,7 @@ async function deleteOneChamp(id) {
     );
     return respuesta.rows;
   } catch (err) {
-    console.error("Error", err);
-    return [];
+    throw err;
   }
 }
 
