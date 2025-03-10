@@ -8,20 +8,23 @@ const conexionBBDD = {
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
 };
-
 if(process.env.ENVIROMENT === 'production'){
-  conexionBBDD['ssl'] = { rejectUnauthorized: false };
+  conexionBBDD.ssl = {
+    require: true,
+    rejectUnauthorized: false
+  };
 }
+
 
 const cliente = new Pool(conexionBBDD);
 
-function conectar() {
-  cliente.connect();
-}
+// function conectar() {
+//   cliente.connect();
+// }
 
-function desconectar() {
-  cliente.end();
-}
+// function desconectar() {
+//   cliente.end();
+// }
 
 async function getChamps() {
   try {
@@ -106,8 +109,8 @@ async function deleteOneChamp(id) {
 }
 
 module.exports = {
-  conectar,
-  desconectar,
+  // conectar,
+  // desconectar,
   getChamps,
   getOneChamp,
   createNewChamp,

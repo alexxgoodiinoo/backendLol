@@ -1,5 +1,5 @@
 const DB = require("../db/BBDD");
-DB.conectar();
+// DB.conectar();
 
 const getAllChamps = async (filterParams) => {
   try {
