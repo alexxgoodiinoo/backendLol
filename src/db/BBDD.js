@@ -1,12 +1,19 @@
-const { Client } = require("pg");
 require('dotenv').config();
+const { Pool } = require("pg");
 
-const cliente = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
+const conexionBBDD = {
+  user: process.env.DB_USERNAME,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+};
+
+if(process.env.ENVIROMENT === 'production'){
+  conexionBBDD['ssl'] = { rejectUnauthorized: false };
+}
+
+const cliente = new Pool(conexionBBDD);
 
 function conectar() {
   cliente.connect();
@@ -21,7 +28,8 @@ async function getChamps() {
     const respuesta = await cliente.query('SELECT * FROM public."Champ"');
     return respuesta.rows;
   } catch (err) {
-    throw err;
+    console.error("Error", err);
+    return [];
   }
 }
 
@@ -33,7 +41,8 @@ async function getOneChamp(id) {
     );
     return respuesta.rows;
   } catch (err) {
-    throw err;
+    console.error("Error", err);
+    return [];
   }
 }
 
@@ -55,7 +64,8 @@ async function createNewChamp(newChamp) {
     );
     return respuesta.rows;
   } catch (err) {
-    throw err;
+    console.error("Error", err);
+    return [];
   }
 }
 
@@ -77,7 +87,8 @@ async function updateOneChamp(updateChamp, id) {
     );
     return respuesta.rows;
   } catch (err) {
-    throw err;
+    console.error("Error", err);
+    return [];
   }
 }
 
@@ -89,7 +100,8 @@ async function deleteOneChamp(id) {
     );
     return respuesta.rows;
   } catch (err) {
-    throw err;
+    console.error("Error", err);
+    return [];
   }
 }
 
